@@ -9,7 +9,7 @@ $sources = Join-Path $temp 'sources with spaces'
 $destination = Join-Path $temp 'discovery with spaces'
 
 function Git {
-    & git @args
+    & git.exe @args
     if ($LASTEXITCODE -ne 0) { throw "Git failed: $args" }
 }
 function Assert($Condition, [string]$Message) {

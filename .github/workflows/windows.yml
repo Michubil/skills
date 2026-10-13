@@ -16,7 +16,7 @@ jobs:
       matrix:
         shell: [powershell, pwsh]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Test installation and independent updates
         shell: pwsh
         run: '& ${{ matrix.shell }} -NoProfile -ExecutionPolicy Bypass -File ./tests/windows.ps1'
